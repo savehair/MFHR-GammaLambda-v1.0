@@ -2,9 +2,14 @@
 from __future__ import annotations
 import numpy as np
 from src.simulation.simpy_system import run_system
+import time
 
 def run_closed_loop(config: dict, gamma: float, lambda_: float, seed: int) -> np.ndarray:
     rng = np.random.default_rng(seed)
+
+    # 新增：打印进入run_system前的日志
+    print(f"  [closed_loop] 开始调用run_system | γ={gamma:.2f}, λ={lambda_:.2f}, seed={seed}", flush=True)
+    start = time.time()
 
     return run_system(
         N=int(config["N"]),
