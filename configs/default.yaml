@@ -1,0 +1,29 @@
+# Paper-aligned defaults (units: minutes)
+N_stores: 15
+users: 1000
+duration_min: 120
+
+arrival:
+  type: NHPP
+  base_rate: 3.0
+  peak_rate: 12.0
+  sigma: 20.0
+
+service:
+  mu: 1.2
+  servers: 3
+
+K:
+  K0: 3.0
+  Kmax: 15.0
+  lambda_range: [0.0, 2.0]
+
+gamma_range: [0.0, 1.0]
+
+update:
+  eta: 0.001
+  interval_min: 5
+  per_store: true
+
+metric:
+  primary: tau

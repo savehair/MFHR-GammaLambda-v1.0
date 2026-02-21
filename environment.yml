@@ -1,0 +1,12 @@
+name: mfhr-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.13
+  - numpy=1.26.4
+  - pandas=2.2.2
+  - matplotlib=3.8.4
+  - scipy=1.13.1
+  - scikit-learn=1.4.2
+  - simpy=4.1.1
+  - pip=24.0

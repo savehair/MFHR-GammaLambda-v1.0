@@ -1,0 +1,33 @@
+# PyCharm / JetBrains
+.idea/
+*.iml
+out/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+env/
+envs/
+venv/
+.venv/
+.conda/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# Results (raw)
+results/raw_runs/
+results/tmp/
+*.npy
+*.npz
+
+# OS
+.DS_Store
+Thumbs.db
