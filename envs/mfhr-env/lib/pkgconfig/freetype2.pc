@@ -1,0 +1,13 @@
+prefix=/Users/yangzhixiang/Documents/GitHub/MFHR-GammaLambda-v1.0/envs/mfhr-env
+exec_prefix=/Users/yangzhixiang/Documents/GitHub/MFHR-GammaLambda-v1.0/envs/mfhr-env
+libdir=/Users/yangzhixiang/Documents/GitHub/MFHR-GammaLambda-v1.0/envs/mfhr-env/lib
+includedir=/Users/yangzhixiang/Documents/GitHub/MFHR-GammaLambda-v1.0/envs/mfhr-env/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 26.4.20
+Requires: 
+Libs: -L/Users/yangzhixiang/Documents/GitHub/MFHR-GammaLambda-v1.0/envs/mfhr-env/lib -lfreetype
+Libs.private: 
+Cflags: -I${includedir}/freetype2

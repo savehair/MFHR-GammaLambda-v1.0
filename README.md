@@ -10,8 +10,8 @@
 在仓库根目录执行：
 
 ```bash
-conda env create -f environment.yml -p ./envs/mfhr-env
-conda activate ./envs/mfhr-env
+conda env create -f environment.yml -p ./envs/mfhr-sti
+conda activate ./envs/mfhr-sti
 ```
 
 ## 2) 运行 γ–λ 相图

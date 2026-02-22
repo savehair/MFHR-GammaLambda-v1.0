@@ -1,33 +1,20 @@
-# PyCharm / JetBrains
 .idea/
 *.iml
-out/
-
-# Python
 __pycache__/
 *.py[cod]
-*$py.class
-
-# Environments
-env/
-envs/
-venv/
 .venv/
-.conda/
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Logs
+venv/
+env/
+data/raw/
+data/generated/
+runs/
+results/
+*.pt
+*.pth
+*.ckpt
 *.log
-logs/
-
-# Results (raw)
-results/raw_runs/
-results/tmp/
-*.npy
-*.npz
-
-# OS
+.pytest_cache/
+.coverage
+htmlcov/
 .DS_Store
 Thumbs.db

@@ -1,12 +1,25 @@
-name: mfhr-env
+name: mfhr_sti
 channels:
+  - pytorch
+  - nvidia
   - conda-forge
 dependencies:
-  - python=3.10.13
-  - numpy=1.26.4
-  - pandas=2.2.2
-  - matplotlib=3.8.4
-  - scipy=1.13.1
-  - scikit-learn=1.4.2
-  - simpy=4.1.1
-  - pip=24.0
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - simpy
+  - networkx
+  - pytorch=2.2
+  - pytorch-cuda=12.1
+  - torchvision
+  - torchaudio
+  - cudatoolkit
+  - pip:
+      - tqdm
+      - openpyxl
+      - python-docx

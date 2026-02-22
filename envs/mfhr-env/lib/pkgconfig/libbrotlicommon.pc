@@ -1,0 +1,11 @@
+prefix=/Users/yangzhixiang/Documents/GitHub/MFHR-GammaLambda-v1.0/envs/mfhr-env
+exec_prefix=/Users/yangzhixiang/Documents/GitHub/MFHR-GammaLambda-v1.0/envs/mfhr-env
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libbrotlicommon
+URL: https://github.com/google/brotli
+Description: Brotli common dictionary library
+Version: 1.2.0
+Libs: -L${libdir} -lbrotlicommon 
+Cflags: -I${includedir}

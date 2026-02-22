@@ -1,0 +1,250 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "extracted_package_dir": "/opt/anaconda3/pkgs/simpy-4.1.1-pyhd8ed1ab_1",
+  "files": [
+    "lib/python3.10/site-packages/simpy-4.1.1.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/simpy-4.1.1.dist-info/LICENSE.rst",
+    "lib/python3.10/site-packages/simpy-4.1.1.dist-info/METADATA",
+    "lib/python3.10/site-packages/simpy-4.1.1.dist-info/RECORD",
+    "lib/python3.10/site-packages/simpy-4.1.1.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/simpy-4.1.1.dist-info/WHEEL",
+    "lib/python3.10/site-packages/simpy-4.1.1.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/simpy-4.1.1.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/simpy/__init__.py",
+    "lib/python3.10/site-packages/simpy/core.py",
+    "lib/python3.10/site-packages/simpy/events.py",
+    "lib/python3.10/site-packages/simpy/exceptions.py",
+    "lib/python3.10/site-packages/simpy/py.typed",
+    "lib/python3.10/site-packages/simpy/resources/__init__.py",
+    "lib/python3.10/site-packages/simpy/resources/base.py",
+    "lib/python3.10/site-packages/simpy/resources/container.py",
+    "lib/python3.10/site-packages/simpy/resources/resource.py",
+    "lib/python3.10/site-packages/simpy/resources/store.py",
+    "lib/python3.10/site-packages/simpy/rt.py",
+    "lib/python3.10/site-packages/simpy/util.py",
+    "lib/python3.10/site-packages/simpy/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/simpy/__pycache__/core.cpython-310.pyc",
+    "lib/python3.10/site-packages/simpy/__pycache__/events.cpython-310.pyc",
+    "lib/python3.10/site-packages/simpy/__pycache__/exceptions.cpython-310.pyc",
+    "lib/python3.10/site-packages/simpy/resources/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/simpy/resources/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/simpy/resources/__pycache__/container.cpython-310.pyc",
+    "lib/python3.10/site-packages/simpy/resources/__pycache__/resource.cpython-310.pyc",
+    "lib/python3.10/site-packages/simpy/resources/__pycache__/store.cpython-310.pyc",
+    "lib/python3.10/site-packages/simpy/__pycache__/rt.cpython-310.pyc",
+    "lib/python3.10/site-packages/simpy/__pycache__/util.cpython-310.pyc"
+  ],
+  "fn": "simpy-4.1.1-pyhd8ed1ab_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/opt/anaconda3/pkgs/simpy-4.1.1-pyhd8ed1ab_1",
+    "type": 1
+  },
+  "md5": "fb53165ab0a126ea6f8bc98c0d787e0d",
+  "name": "simpy",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/anaconda3/pkgs/simpy-4.1.1-pyhd8ed1ab_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/simpy-4.1.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/simpy-4.1.1.dist-info/LICENSE.rst",
+        "path_type": "hardlink",
+        "sha256": "5f09a7bdf08f239271b15df1cbe2ba7f62649f8b497988274626f48638b84802",
+        "sha256_in_prefix": "5f09a7bdf08f239271b15df1cbe2ba7f62649f8b497988274626f48638b84802",
+        "size_in_bytes": 1125
+      },
+      {
+        "_path": "site-packages/simpy-4.1.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "4c2e6759c54af48bcc5823e36bc98242a2b3a6557452968a3c3d5eb08ecf7c72",
+        "sha256_in_prefix": "4c2e6759c54af48bcc5823e36bc98242a2b3a6557452968a3c3d5eb08ecf7c72",
+        "size_in_bytes": 6075
+      },
+      {
+        "_path": "site-packages/simpy-4.1.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "bcf85a85d8ae954281a056886f545303d0a1ed4bba3e0576b1aff366cb5a4507",
+        "sha256_in_prefix": "bcf85a85d8ae954281a056886f545303d0a1ed4bba3e0576b1aff366cb5a4507",
+        "size_in_bytes": 2098
+      },
+      {
+        "_path": "site-packages/simpy-4.1.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/simpy-4.1.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "sha256_in_prefix": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/simpy-4.1.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "7f9554a819412f4b86bae6f34f82501b3f9cff95165ced173da23b6ab2a3fd9c",
+        "sha256_in_prefix": "7f9554a819412f4b86bae6f34f82501b3f9cff95165ced173da23b6ab2a3fd9c",
+        "size_in_bytes": 101
+      },
+      {
+        "_path": "site-packages/simpy-4.1.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "bdd4b50e937c9ff7bf1c08505011bd2aea1ad6edbedfb3826f560fd09c89ea41",
+        "sha256_in_prefix": "bdd4b50e937c9ff7bf1c08505011bd2aea1ad6edbedfb3826f560fd09c89ea41",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/simpy/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "9a15ad441b4e1c59b1391c698f512caeb547ee936c96d633f2f841c10cd3a246",
+        "sha256_in_prefix": "9a15ad441b4e1c59b1391c698f512caeb547ee936c96d633f2f841c10cd3a246",
+        "size_in_bytes": 2600
+      },
+      {
+        "_path": "site-packages/simpy/core.py",
+        "path_type": "hardlink",
+        "sha256": "0274b36d9dda5c0901b8d765885705bbe76640e24da1bc63e679433e0f9c49dd",
+        "sha256_in_prefix": "0274b36d9dda5c0901b8d765885705bbe76640e24da1bc63e679433e0f9c49dd",
+        "size_in_bytes": 8364
+      },
+      {
+        "_path": "site-packages/simpy/events.py",
+        "path_type": "hardlink",
+        "sha256": "7cba6e717092cee1b0d51ed33b83a2f51f055dc3327c894bf99122c3bfa16b4d",
+        "sha256_in_prefix": "7cba6e717092cee1b0d51ed33b83a2f51f055dc3327c894bf99122c3bfa16b4d",
+        "size_in_bytes": 23065
+      },
+      {
+        "_path": "site-packages/simpy/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "9b29a23cee188bb94d9cc0ea0dff98916cac2789fe4d6375815976b69f98db76",
+        "sha256_in_prefix": "9b29a23cee188bb94d9cc0ea0dff98916cac2789fe4d6375815976b69f98db76",
+        "size_in_bytes": 884
+      },
+      {
+        "_path": "site-packages/simpy/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/simpy/resources/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "85376d218f852a766427d1074379aa79b76bbbfa746d496f8bdff6621c254255",
+        "sha256_in_prefix": "85376d218f852a766427d1074379aa79b76bbbfa746d496f8bdff6621c254255",
+        "size_in_bytes": 390
+      },
+      {
+        "_path": "site-packages/simpy/resources/base.py",
+        "path_type": "hardlink",
+        "sha256": "20dc903861a382b42772c9daec7ad79ae9fc87d076341bd3f3297dd6c34d1da1",
+        "sha256_in_prefix": "20dc903861a382b42772c9daec7ad79ae9fc87d076341bd3f3297dd6c34d1da1",
+        "size_in_bytes": 9729
+      },
+      {
+        "_path": "site-packages/simpy/resources/container.py",
+        "path_type": "hardlink",
+        "sha256": "2721dacd16fe46c3fc1ff027cd65ae8f5f090a1eaf3850bb7eb2ec778e37f3bd",
+        "sha256_in_prefix": "2721dacd16fe46c3fc1ff027cd65ae8f5f090a1eaf3850bb7eb2ec778e37f3bd",
+        "size_in_bytes": 3883
+      },
+      {
+        "_path": "site-packages/simpy/resources/resource.py",
+        "path_type": "hardlink",
+        "sha256": "e184fb6ab518d23552f8ac1b05fb52ad854f5045a62814e531f6ca4353204e05",
+        "sha256_in_prefix": "e184fb6ab518d23552f8ac1b05fb52ad854f5045a62814e531f6ca4353204e05",
+        "size_in_bytes": 9862
+      },
+      {
+        "_path": "site-packages/simpy/resources/store.py",
+        "path_type": "hardlink",
+        "sha256": "5731066d0126fd68c1ee798a23927a65d4ebf14c7e89bfce5ce703494c77bbe7",
+        "sha256_in_prefix": "5731066d0126fd68c1ee798a23927a65d4ebf14c7e89bfce5ce703494c77bbe7",
+        "size_in_bytes": 6276
+      },
+      {
+        "_path": "site-packages/simpy/rt.py",
+        "path_type": "hardlink",
+        "sha256": "6d51d90a0badc6d08d0bdbc67ffe589398af0bd430bb74c46f0cddabff6d2b6d",
+        "sha256_in_prefix": "6d51d90a0badc6d08d0bdbc67ffe589398af0bd430bb74c46f0cddabff6d2b6d",
+        "size_in_bytes": 3007
+      },
+      {
+        "_path": "site-packages/simpy/util.py",
+        "path_type": "hardlink",
+        "sha256": "e4270b11b743ff4fd1fab86bff08a9b464219a02190d9725cf6d87006603f49c",
+        "sha256_in_prefix": "e4270b11b743ff4fd1fab86bff08a9b464219a02190d9725cf6d87006603f49c",
+        "size_in_bytes": 2037
+      },
+      {
+        "_path": "lib/python3.10/site-packages/simpy/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/simpy/__pycache__/core.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/simpy/__pycache__/events.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/simpy/__pycache__/exceptions.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/simpy/resources/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/simpy/resources/__pycache__/base.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/simpy/resources/__pycache__/container.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/simpy/resources/__pycache__/resource.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/simpy/resources/__pycache__/store.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/simpy/__pycache__/rt.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/simpy/__pycache__/util.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "simpy=4.1.1",
+  "sha256": "eec4ca6d389bf8e6084fd457b75f9a14fe93469307ecc1b01ff4925ca4c2c81d",
+  "size": 41753,
+  "subdir": "noarch",
+  "timestamp": 1735074039000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/simpy-4.1.1-pyhd8ed1ab_1.conda",
+  "version": "4.1.1"
+}

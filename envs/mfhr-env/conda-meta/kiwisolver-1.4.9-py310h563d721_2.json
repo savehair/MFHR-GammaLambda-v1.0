@@ -1,0 +1,157 @@
+{
+  "build": "py310h563d721_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+  "constrains": [],
+  "depends": [
+    "python",
+    "python 3.10.* *_cpython",
+    "__osx >=11.0",
+    "libcxx >=19",
+    "python_abi 3.10.* *_cp310"
+  ],
+  "extracted_package_dir": "/opt/anaconda3/pkgs/kiwisolver-1.4.9-py310h563d721_2",
+  "files": [
+    "lib/python3.10/site-packages/kiwisolver/__init__.py",
+    "lib/python3.10/site-packages/kiwisolver/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/kiwisolver/__pycache__/exceptions.cpython-310.pyc",
+    "lib/python3.10/site-packages/kiwisolver/_cext.cpython-310-darwin.so",
+    "lib/python3.10/site-packages/kiwisolver/_cext.pyi",
+    "lib/python3.10/site-packages/kiwisolver/exceptions.py",
+    "lib/python3.10/site-packages/kiwisolver/py.typed",
+    "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/METADATA",
+    "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/RECORD",
+    "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/WHEEL",
+    "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/top_level.txt"
+  ],
+  "fn": "kiwisolver-1.4.9-py310h563d721_2.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/opt/anaconda3/pkgs/kiwisolver-1.4.9-py310h563d721_2",
+    "type": 1
+  },
+  "md5": "1c29ffa84e75a6f8be4a8d8ddce17545",
+  "name": "kiwisolver",
+  "package_tarball_full_path": "/opt/anaconda3/pkgs/kiwisolver-1.4.9-py310h563d721_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e126be30d2359518772b59fd2c480a05e65755523eb89ac3fb1b24d7a8d84767",
+        "sha256_in_prefix": "e126be30d2359518772b59fd2c480a05e65755523eb89ac3fb1b24d7a8d84767",
+        "size_in_bytes": 1013
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b50c92cc18daea9ddb27c7deefd915fc4c96760a8e685a65cd2335313f9b39c7",
+        "sha256_in_prefix": "b50c92cc18daea9ddb27c7deefd915fc4c96760a8e685a65cd2335313f9b39c7",
+        "size_in_bytes": 882
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver/__pycache__/exceptions.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "56df1169b52d6c876ef0f106d93232b8ae1a6a0a8838c0f9ac1cb1e6debe6a23",
+        "sha256_in_prefix": "56df1169b52d6c876ef0f106d93232b8ae1a6a0a8838c0f9ac1cb1e6debe6a23",
+        "size_in_bytes": 1924
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver/_cext.cpython-310-darwin.so",
+        "path_type": "hardlink",
+        "sha256": "0c8951c3fa71b5bc7a2f250e56548276b76782ee612f65453de77e6cd313a6c1",
+        "sha256_in_prefix": "0c8951c3fa71b5bc7a2f250e56548276b76782ee612f65453de77e6cd313a6c1",
+        "size_in_bytes": 199824
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver/_cext.pyi",
+        "path_type": "hardlink",
+        "sha256": "fb0eceb628f0eddfbd461ff5f84898b519f62fe49376f8e802b874daccebf2d0",
+        "sha256_in_prefix": "fb0eceb628f0eddfbd461ff5f84898b519f62fe49376f8e802b874daccebf2d0",
+        "size_in_bytes": 8657
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "85a18408089f16356ac13e5eb10d6c122aac6a35ba272762a75ea27873de2f4e",
+        "sha256_in_prefix": "85a18408089f16356ac13e5eb10d6c122aac6a35ba272762a75ea27873de2f4e",
+        "size_in_bytes": 1242
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "cad34a37b5cb66cfa1b9676f33721037ae2d850b9b0c71377478a1d6bf0c7d40",
+        "sha256_in_prefix": "cad34a37b5cb66cfa1b9676f33721037ae2d850b9b0c71377478a1d6bf0c7d40",
+        "size_in_bytes": 6260
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "fd5bd4e88a56a5802b7fb848b9703ced743020e6e0b6b9411a446ea22a849748",
+        "sha256_in_prefix": "fd5bd4e88a56a5802b7fb848b9703ced743020e6e0b6b9411a446ea22a849748",
+        "size_in_bytes": 1213
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "c321dfe940f3c87c942be68362c732cb2131a5823b49e119f718f2122538727c",
+        "sha256_in_prefix": "c321dfe940f3c87c942be68362c732cb2131a5823b49e119f718f2122538727c",
+        "size_in_bytes": 109
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "7656914d8fbd0c2f393a95e23346c9fd5103b494b88c7b1c37d94151fceb71e4",
+        "sha256_in_prefix": "7656914d8fbd0c2f393a95e23346c9fd5103b494b88c7b1c37d94151fceb71e4",
+        "size_in_bytes": 113
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "cf20799d32de0eefa2ea904e3ac5122f47aed5d352930751eb61724762c49d90",
+        "sha256_in_prefix": "cf20799d32de0eefa2ea904e3ac5122f47aed5d352930751eb61724762c49d90",
+        "size_in_bytes": 3289
+      },
+      {
+        "_path": "lib/python3.10/site-packages/kiwisolver-1.4.9.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "c6ac168fba121e5a488dcc3640c25bf29b9314f7630c13bbf00669f608d387d7",
+        "sha256_in_prefix": "c6ac168fba121e5a488dcc3640c25bf29b9314f7630c13bbf00669f608d387d7",
+        "size_in_bytes": 11
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "38d427a3d24ca94b4c424bcb0fdacde5a3a196c1be1aee84cf60edca98d6167a",
+  "size": 65984,
+  "subdir": "osx-arm64",
+  "timestamp": 1762488860000,
+  "url": "https://conda.anaconda.org/conda-forge/osx-arm64/kiwisolver-1.4.9-py310h563d721_2.conda",
+  "version": "1.4.9"
+}

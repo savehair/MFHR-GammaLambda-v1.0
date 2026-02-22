@@ -1,0 +1,34 @@
+{
+  "build": "py310hb6292c7_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+  "constrains": [],
+  "depends": [
+    "matplotlib-base >=3.8.4,<3.8.5.0a0",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310",
+    "tornado >=5"
+  ],
+  "extracted_package_dir": "/opt/anaconda3/pkgs/matplotlib-3.8.4-py310hb6292c7_2",
+  "files": [],
+  "fn": "matplotlib-3.8.4-py310hb6292c7_2.conda",
+  "license": "PSF-2.0",
+  "link": {
+    "source": "/opt/anaconda3/pkgs/matplotlib-3.8.4-py310hb6292c7_2",
+    "type": 1
+  },
+  "md5": "db30441d94ae737e3f665ec8c3c0677d",
+  "name": "matplotlib",
+  "package_tarball_full_path": "/opt/anaconda3/pkgs/matplotlib-3.8.4-py310hb6292c7_2.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "matplotlib=3.8.4",
+  "sha256": "55ed3accf02f43b67c414a57e9606b14fce2fb910f78686c07dcce10b4213e45",
+  "size": 8530,
+  "subdir": "osx-arm64",
+  "timestamp": 1715976731000,
+  "url": "https://conda.anaconda.org/conda-forge/osx-arm64/matplotlib-3.8.4-py310hb6292c7_2.conda",
+  "version": "3.8.4"
+}
