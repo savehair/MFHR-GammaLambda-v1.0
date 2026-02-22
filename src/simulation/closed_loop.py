@@ -4,7 +4,7 @@ import numpy as np
 from src.simulation.simpy_system import run_system
 import time
 
-def run_closed_loop(config: dict, gamma: float, lambda_: float, seed: int) -> np.ndarray:
+def run_closed_loop(config: dict, gamma: float, lambda_: float, seed: int,predictor=None) -> np.ndarray:
     rng = np.random.default_rng(seed)
 
     # 新增：打印进入run_system前的日志
