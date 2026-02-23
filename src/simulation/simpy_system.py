@@ -135,25 +135,27 @@ def run_system(
                 K_j = compute_K(K0, lam_eff, delta, Kmax)
 
             # =============================
-            # λ=0 优化：避免双预测
+            # 第二轮预测（按 K_j）
             # =============================
-            if lam == 0 or ABLATE_LAMBDA:
+            if predictor is not None:
+                # 当前 predictor 接口仅依赖 features，不依赖 K_assumed；
+                # 直接复用第一轮结果，避免重复推理开销。
+                p50, p90 = p50_0, p90_0
+            elif lam == 0 or ABLATE_LAMBDA:
+                # λ=0 或 λ 消融时，K_j 与 K0 等价，不需要重复 MC 预测。
                 p50, p90 = p50_0, p90_0
             else:
-                if predictor is not None:
-                    p50, p90 = predictor.predict_quantiles(features)
-                else:
-                    p50, p90 = predict_wait_quantiles_mc(
-                        now=now,
-                        eta=eta,
-                        in_service=st.in_service,
-                        queue=st.queue,
-                        servers=servers,
-                        mu=mu,
-                        K_assumed=K_j,
-                        n_mc=mc_samples,
-                        rng=rng,
-                    )
+                p50, p90 = predict_wait_quantiles_mc(
+                    now=now,
+                    eta=eta,
+                    in_service=st.in_service,
+                    queue=st.queue,
+                    servers=servers,
+                    mu=mu,
+                    K_assumed=K_j,
+                    n_mc=mc_samples,
+                    rng=rng,
+                )
 
             W50[j] = p50
             W90[j] = p90
