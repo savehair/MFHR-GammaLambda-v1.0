@@ -105,6 +105,34 @@ python -m experiments.run_ablation
 - `results/ablation_results.csv`
 - `results/best_model.pt`（训练过程中保存）
 
+### 3.3 运行鲁棒性实验（新增）
+
+一键运行全部鲁棒性实验：
+
+```bash
+python experiments/run_all_robustness.py
+```
+
+该总控脚本会顺序执行：
+- `experiments/robustness/nif_extreme_flow_test.py`
+- `experiments/robustness/nif_ood_test.py`
+- `experiments/robustness/model_comparison.py`
+- `experiments/robustness/history_sensitivity.py`
+- `experiments/robustness/scale_expansion_test.py`
+- `experiments/robustness/peak_shock_test.py`
+- `experiments/robustness/boundary_scan.py`
+
+鲁棒性实验输出（默认在 `results/`）：
+- `nif_extreme_flow.csv`
+- `nif_ood_metrics.csv`
+- `model_comparison.csv`
+- `model_comparison_ci.csv`
+- `history_sensitivity.csv`
+- `scale_expansion.csv`
+- `peak_shock_metrics.csv`
+- `boundary_scan.npz`
+- `robustness_summary.json`
+
 ## 4. 数据导出
 
 ### 4.1 用内置 Phase5 脚本导出汇总文件
@@ -186,10 +214,13 @@ python -m experiments.main_experiment --gamma_points 5 --lambda_points 5 --seeds
 # 4) 消融实验
 python -m experiments.run_ablation
 
-# 5) 导出报告文件
+# 5) 鲁棒性实验（全套）
+python experiments/run_all_robustness.py
+
+# 6) 导出报告文件
 python -m experiments.phase5.main_report_generator
 
-# 6) 代表性可视化
+# 7) 代表性可视化
 python -m experiments.plot_four_cases_tau --npz results/phase_results.npz --seeds 5 --out_dir results/figures
 ```
 
@@ -223,8 +254,17 @@ export MPLCONFIGDIR=.cache/matplotlib
 ```text
 results/
 ├── ablation_results.csv
+├── boundary_scan.npz
 ├── best_model.pt
+├── history_sensitivity.csv
 ├── phase_results.npz
+├── model_comparison.csv
+├── model_comparison_ci.csv
+├── nif_extreme_flow.csv
+├── nif_ood_metrics.csv
+├── peak_shock_metrics.csv
+├── robustness_summary.json
+├── scale_expansion.csv
 ├── heat_tau_mean.png
 ├── heat_tau_var.png
 ├── heat_tau_slope.png
