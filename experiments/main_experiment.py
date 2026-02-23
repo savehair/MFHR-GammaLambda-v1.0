@@ -7,7 +7,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 from src.simulation.closed_loop import run_closed_loop
-from src.metrics.fairness import jain_index
 
 
 # ==============================
@@ -42,8 +41,6 @@ def run_task(args_tuple):
     except Exception as e:
         print("Task failed:", e)
         return 0.0, 0.0, 0.0, 1.0
-    mean, var, slope = compute_stats(series, burn)
-    return mean, var, slope, fairness
 
 
 # ==============================
