@@ -3,7 +3,18 @@ from __future__ import annotations
 import numpy as np
 from src.simulation.simpy_system import run_system
 
-def run_closed_loop(config: dict, gamma: float, lambda_: float, seed: int, predictor=None) -> np.ndarray:
+def run_closed_loop(
+    config: dict,
+    gamma: float,
+    lambda_: float,
+    seed: int,
+    predictor=None,
+    *,
+    ABLATE_LAMBDA: bool = False,
+    FIX_GAMMA: bool = False,
+    NO_PRIORITY: bool = False,
+    USE_DYNAMIC_LAMBDA: bool = False,
+) -> tuple[np.ndarray, float]:
     rng = np.random.default_rng(seed)
 
     return run_system(
@@ -24,4 +35,8 @@ def run_closed_loop(config: dict, gamma: float, lambda_: float, seed: int, predi
         mc_samples=int(config.get("mc_samples", 200)),
         rng=rng,
         predictor=predictor,
+        ABLATE_LAMBDA=ABLATE_LAMBDA,
+        FIX_GAMMA=FIX_GAMMA,
+        NO_PRIORITY=NO_PRIORITY,
+        USE_DYNAMIC_LAMBDA=USE_DYNAMIC_LAMBDA,
     )
