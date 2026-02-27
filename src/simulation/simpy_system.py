@@ -73,7 +73,6 @@ def run_system(
         mc_samples: int,
         rng: np.random.Generator,
 
-        # ===== 新增 =====
         predictor=None,
         ABLATE_LAMBDA=False,
         FIX_GAMMA=False,
