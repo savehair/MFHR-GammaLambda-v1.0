@@ -14,7 +14,7 @@ def evaluate(model, dataset, adj):
             x = x.unsqueeze(0).to(DEVICE)
             out = model(x, adj)
             preds.append(out[0,0].item())  # P50
-            trues.append(y[0].item())
+            trues.append(float(y.item() if y.ndim == 0 else y.reshape(-1)[0].item()))
 
     preds = np.array(preds)
     trues = np.array(trues)

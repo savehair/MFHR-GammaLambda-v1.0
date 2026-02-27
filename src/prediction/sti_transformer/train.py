@@ -14,7 +14,7 @@ def train_model(model, dataset, adj, epochs=20, lr=1e-3):
         total_loss = 0
 
         for x, y in loader:
-            x, y = x.to(DEVICE), y.to(DEVICE)
+            x, y = x.to(DEVICE), y.to(DEVICE).reshape(-1)
 
             optimizer.zero_grad()
             out = model(x, adj)
