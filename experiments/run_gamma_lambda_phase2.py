@@ -90,7 +90,7 @@ def main():
                 seed = 12345 + s
                 sim_start = time.time()
 
-                series = run_closed_loop(
+                series, _ = run_closed_loop(
                     config,
                     gamma=float(gamma),
                     lambda_=float(lam),
