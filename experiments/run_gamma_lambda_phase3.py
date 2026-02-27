@@ -18,7 +18,7 @@ def run_single_task(args_tuple):
     config, gamma, lambda_, seed, burn_in = args_tuple
 
     # 执行单次仿真
-    series = run_closed_loop(config, gamma=float(gamma), lambda_=float(lambda_), seed=seed)
+    series, _ = run_closed_loop(config, gamma=float(gamma), lambda_=float(lambda_), seed=seed)
 
     # 计算统计量
     burn = int(len(series) * burn_in)
