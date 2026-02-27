@@ -2,8 +2,12 @@ import torch
 import numpy as np
 from config import DEVICE
 from src.metrics.regression import mae, rmse, mape
+from src.prediction.sti_transformer.dataset import QueueDataset
 
 def evaluate(model, dataset, adj):
+
+    if isinstance(dataset, np.ndarray):
+        dataset = QueueDataset(dataset)
 
     model.eval()
     preds = []
