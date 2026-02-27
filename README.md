@@ -58,7 +58,7 @@ bash smoke_test.sh
 如果你想指定解释器（例如特定 conda 环境）：
 
 ```bash
-PYTHON_BIN=python bash smoke_test.sh
+.\smoke_test.ps1
 ```
 
 ## 3. 运行实验
@@ -69,22 +69,12 @@ PYTHON_BIN=python bash smoke_test.sh
 
 小规模（快速验证）：
 ```bash
-python -m experiments.main_experiment \
-  --gamma_points 5 \
-  --lambda_points 5 \
-  --seeds 2 \
-  --n_workers 2 \
-  --out_dir results
+python -m experiments.main_experiment --gamma_points 5 --lambda_points 5 --seeds 2 --n_workers 2 --out_dir results
 ```
 
 全量（论文级/正式结果）：
 ```bash
-python -m experiments.main_experiment \
-  --gamma_points 21 \
-  --lambda_points 21 \
-  --seeds 5 \
-  --n_workers 8 \
-  --out_dir results
+python -m experiments.main_experiment --gamma_points 21 --lambda_points 21 --seeds 5 --n_workers 8 --out_dir results
 ```
 
 主实验输出（默认在 `results/`）：
@@ -190,9 +180,9 @@ PY
 ### 5.2 代表性四场景 τ(t) 可视化（基于相图自动选点）
 
 ```bash
-python -m experiments.plot_four_cases_tau \
-  --npz results/phase_results.npz \
-  --seeds 5 \
+python -m experiments.plot_four_cases_tau 
+  --npz results/phase_results.npz 
+  --seeds 5 
   --out_dir results/figures
 ```
 
