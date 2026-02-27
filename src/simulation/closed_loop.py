@@ -15,6 +15,12 @@ def run_closed_loop(
     NO_PRIORITY: bool = False,
     USE_DYNAMIC_LAMBDA: bool = False,
 ) -> tuple[np.ndarray, float]:
+    """Run one closed-loop MFHR simulation.
+
+    Returns:
+        A tuple ``(tau_series, fairness)`` where ``tau_series`` is the per-minute
+        average wait-time series and ``fairness`` is Jain's index over realized waits.
+    """
     rng = np.random.default_rng(seed)
 
     return run_system(
