@@ -19,3 +19,5 @@ results/
 htmlcov/
 .DS_Store
 Thumbs.db
+/envs
+/.cache

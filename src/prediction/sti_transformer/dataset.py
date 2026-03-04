@@ -19,6 +19,6 @@ class QueueDataset(Dataset):
 
     def __getitem__(self, idx):
         x = self.data[idx]
-        y = self.data[idx + self.horizon][:, 0]  # 假设第0维为等待时间
-        return torch.tensor(x, dtype=torch.float32), \
-               torch.tensor(y, dtype=torch.float32)
+        # 预测 horizon 后第 0 个门店的等待时间（标量）
+        y = self.data[idx + self.horizon][0, 0]
+        return torch.tensor(x, dtype=torch.float32), torch.tensor(y, dtype=torch.float32)

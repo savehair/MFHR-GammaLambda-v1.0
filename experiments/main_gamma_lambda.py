@@ -29,7 +29,7 @@ def compute_stats(tau_series: np.ndarray, burn_in_frac: float):
 def run_single_task(args_tuple):
     config, gamma, lam, seed, burn_in = args_tuple
 
-    series = run_closed_loop(
+    series, _ = run_closed_loop(
         config=config,
         gamma=float(gamma),
         lambda_=float(lam),
