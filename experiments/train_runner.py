@@ -1,13 +1,10 @@
 import torch
 torch.set_num_threads(1)
-import os
 from src.prediction.sti_transformer.train import train_model
 from src.prediction.sti_transformer.evaluate import evaluate
 from src.prediction.sti_transformer.ablation import build_model
 from src.prediction.sti_transformer.dataset import QueueDataset
 from config import DEVICE
-from tqdm import tqdm
-import time
 
 def run_training(data_train, data_val, config, adj):
 
@@ -40,5 +37,10 @@ def run_training(data_train, data_val, config, adj):
             print("Early stopping triggered.")
             break
 
-    model.load_state_dict(torch.load("results/best_model.pt"))
+    try:
+        state_dict = torch.load("results/best_model.pt", map_location=DEVICE, weights_only=True)
+    except TypeError:
+        state_dict = torch.load("results/best_model.pt", map_location=DEVICE)
+
+    model.load_state_dict(state_dict)
     return model

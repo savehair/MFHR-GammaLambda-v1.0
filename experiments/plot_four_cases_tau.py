@@ -81,7 +81,7 @@ def main():
 
         for s in range(args.seeds):
             seed = 10000 + s
-            series = run_closed_loop(config, gamma=float(gamma), lambda_=float(lam), seed=seed)
+            series, _ = run_closed_loop(config, gamma=float(gamma), lambda_=float(lam), seed=seed)
             all_series.append(series)
 
         all_series = np.array(all_series)

@@ -19,6 +19,12 @@ class STITransformer(nn.Module):
         self.use_gcn = use_gcn
         self.use_transformer = use_transformer
 
+        # 当关闭 NIF 时，仍需把输入维度映射到 hidden_dim，
+        # 以兼容后续 GCN/Transformer/Head 的固定 hidden 维度。
+        self.input_proj = (
+            nn.Identity() if input_dim == hidden_dim else nn.Linear(input_dim, hidden_dim)
+        )
+
         if use_nif:
             self.nif = NIFModule(input_dim, hidden_dim)
 
@@ -35,6 +41,8 @@ class STITransformer(nn.Module):
 
         if self.use_nif:
             x = self.nif(x)
+        else:
+            x = self.input_proj(x)
 
         if self.use_gcn and adj is not None:
             x = self.gcn(x, adj)

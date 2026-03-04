@@ -72,10 +72,14 @@ def forward_model(
     x_batch: torch.Tensor,
     adj: torch.Tensor,
 ) -> torch.Tensor:
+    """Return P50 predictions with unified shape [B, N]."""
     if model_name == "STI":
         x_last = x_batch[:, -1, :, :]
-        return model(x_last, adj)
-    return model(x_batch)
+        out = model(x_last, adj)  # [B, 2]
+        return out[:, 0].unsqueeze(1).expand(-1, x_batch.shape[2])
+
+    out = model(x_batch)  # [B, N, 2]
+    return out[:, :, 0]
 
 
 def train_one_model(
@@ -108,8 +112,7 @@ def train_one_model(
             yb = yb.to(device)
 
             optimizer.zero_grad()
-            out = forward_model(model_name, model, xb, adj)
-            pred = out[:, :, 0]
+            pred = forward_model(model_name, model, xb, adj)
             loss = criterion(pred, yb)
             loss.backward()
             optimizer.step()
@@ -131,8 +134,7 @@ def evaluate_model(
     adj = torch.eye(x_test.shape[2], dtype=torch.float32, device=device)
 
     with torch.no_grad():
-        out = forward_model(model_name, model, x_t, adj)
-        pred = out[:, :, 0]
+        pred = forward_model(model_name, model, x_t, adj)
 
     err = (pred - y_t).detach().cpu().numpy().astype(np.float64)
     mae_val = float(np.mean(np.abs(err), dtype=np.float64))
@@ -155,11 +157,13 @@ def build_models(input_dim: int) -> Dict[str, Callable[[], nn.Module]]:
     }
 
 
-def validate_sti_better(df: pd.DataFrame) -> None:
-    means = df.groupby("model")["MAE"].mean()
-    sti_mae = float(means.loc["STI"])
-    others = [float(means.loc[m]) for m in means.index if m != "STI"]
-    assert all(sti_mae <= val for val in others)
+def summarize_model_ranking(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.groupby("model", as_index=False)[["MAE", "RMSE"]]
+        .mean()
+        .sort_values("MAE", ascending=True)
+        .reset_index(drop=True)
+    )
 
 
 def run_experiment(
@@ -177,6 +181,9 @@ def run_experiment(
     device = torch.device("cpu")
     rows: List[Dict[str, float | int | str]] = []
 
+    train_epochs = 3
+    train_lr = 1e-3
+
     for seed in range(seeds):
         data = generate_dataset(seed=3000 + seed)
         x, y = build_windows(data, history=history)
@@ -185,12 +192,6 @@ def run_experiment(
         model_builders = build_models(input_dim=x.shape[-1])
         for model_name, builder in model_builders.items():
             model = builder()
-            if model_name == "STI":
-                epochs = 6
-                lr = 3e-3
-            else:
-                epochs = 1
-                lr = 5e-4
 
             model = train_one_model(
                 model_name=model_name,
@@ -198,8 +199,8 @@ def run_experiment(
                 x_train=x_train,
                 y_train=y_train,
                 seed=seed,
-                epochs=epochs,
-                lr=lr,
+                epochs=train_epochs,
+                lr=train_lr,
                 device=device,
             )
 
@@ -221,7 +222,7 @@ def run_experiment(
             )
 
     df = pd.DataFrame(rows)
-    validate_sti_better(df)
+    summary_df = summarize_model_ranking(df)
 
     ci_rows: List[Dict[str, float | str]] = []
     for model_name in sorted(df["model"].unique()):
@@ -246,6 +247,10 @@ def run_experiment(
     Path("results").mkdir(exist_ok=True)
     df.to_csv(out_csv, index=False)
     ci_df.to_csv(out_ci_csv, index=False)
+
+    summary_path = out_csv.with_name("model_comparison_summary.csv")
+    summary_df.to_csv(summary_path, index=False)
+
     return df, ci_df
 
 
@@ -269,7 +274,8 @@ def test_model_comparison_assertion_example() -> None:
             "RMSE": [1.0, 1.1, 1.4, 1.3, 1.5, 1.4, 1.6, 1.5],
         }
     )
-    validate_sti_better(demo)
+    ranking = summarize_model_ranking(demo)
+    assert ranking.iloc[0]["model"] == "STI"
 
 
 if __name__ == "__main__":

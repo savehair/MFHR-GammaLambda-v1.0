@@ -36,11 +36,11 @@ def run_task(args_tuple):
         )
 
         mean, var, slope = compute_stats(series, burn)
-        return mean, var, slope, fairness
+        return mean, var, slope, fairness, False
 
     except Exception as e:
         print("Task failed:", e)
-        return 0.0, 0.0, 0.0, 1.0
+        return np.nan, np.nan, np.nan, np.nan, True
 
 
 # ==============================
@@ -159,23 +159,30 @@ def main():
         )
 
     idx = 0
+    failed_runs = 0
     for i in range(len(gamma_grid)):
         for j in range(len(lambda_grid)):
 
             means, vars_, slopes, fairs = [], [], [], []
 
             for _ in range(args.seeds):
-                m, v, sl, f = results[idx]
-                means.append(m)
-                vars_.append(v)
-                slopes.append(sl)
-                fairs.append(f)
+                m, v, sl, f, failed = results[idx]
+                if failed:
+                    failed_runs += 1
+                else:
+                    means.append(m)
+                    vars_.append(v)
+                    slopes.append(sl)
+                    fairs.append(f)
                 idx += 1
 
-            tau_mean[i, j] = np.mean(means)
-            tau_var[i, j] = np.mean(vars_)
-            tau_slope[i, j] = np.mean(slopes)
-            fairness_map[i, j] = np.mean(fairs)
+            tau_mean[i, j] = np.nan if len(means) == 0 else np.mean(means)
+            tau_var[i, j] = np.nan if len(vars_) == 0 else np.mean(vars_)
+            tau_slope[i, j] = np.nan if len(slopes) == 0 else np.mean(slopes)
+            fairness_map[i, j] = np.nan if len(fairs) == 0 else np.mean(fairs)
+
+    if failed_runs > 0:
+        print(f"[WARN] Failed simulation runs: {failed_runs}/{len(results)}")
 
     # ==============================
     # 保存数据
